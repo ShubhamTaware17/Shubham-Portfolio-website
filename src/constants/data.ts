@@ -393,8 +393,8 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const ACHIEVEMENTS: Achievement[] = [
-  { id: 'projects', label: 'Projects Completed', value: 15, suffix: '+', icon: 'FolderGit2' },
-  { id: 'tech', label: 'Technologies Learned', value: 20, suffix: '+', icon: 'Cpu' },
-  { id: 'github', label: 'GitHub Contributions', value: 500, suffix: '+', icon: 'Github' },
-  { id: 'certs', label: 'Certificates', value: 5, suffix: '+', icon: 'Award' },
+  { id: 'web', label: 'Live Web Platforms', value: 6, suffix: '+', icon: 'Layers' },
+  { id: 'apps', label: 'Play Store Mobile Apps', value: 4, suffix: '+', icon: 'Smartphone' },
+  { id: 'exp', label: 'Years of Experience', value: 1.5, suffix: '+', icon: 'Briefcase' },
+  { id: 'delivery', label: 'Client Satisfaction', value: 100, suffix: '%', icon: 'Sparkles' },
 ];

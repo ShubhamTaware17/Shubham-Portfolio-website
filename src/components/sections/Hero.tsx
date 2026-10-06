@@ -176,6 +176,29 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+
+        {/* Infinite Tech Stack Marquee Ribbon */}
+        <div className="mt-14 overflow-hidden rounded-xl border border-gold-400/20 bg-[#12100E]/70 py-3.5 backdrop-blur-md">
+          <div className="flex w-max animate-[shimmer_25s_linear_infinite] items-center gap-8 whitespace-nowrap">
+            {[...Array(3)].flatMap(() => [
+              '⚛️ React.js',
+              '📱 React Native',
+              '🔷 TypeScript',
+              '⚡ Redux Toolkit',
+              '🎨 Tailwind CSS',
+              '🌐 RESTful APIs',
+              '🚀 High Performance UI',
+              '💻 JavaScript (ES6+)',
+              '📦 Axios & State Management',
+              '🛠️ Android Play Store Deployments',
+            ]).map((tech, idx) => (
+              <span key={idx} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-gold-300">
+                <span>{tech}</span>
+                <span className="text-gold-400/50">✦</span>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
@@ -183,7 +206,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="mt-10"
+        className="mt-8"
       >
         <ChevronDown className="h-4 w-4 animate-bounce text-gold-400/60" />
       </motion.div>
