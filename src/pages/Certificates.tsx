@@ -35,7 +35,7 @@ export default function Certificates() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 to-transparent" />
-                <div className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-royal-600 to-cyan-500 text-white shadow-glow">
+                <div className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500 to-royal-700 text-white shadow-glow">
                   <Award className="h-4 w-4" />
                 </div>
               </div>

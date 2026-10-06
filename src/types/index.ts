@@ -28,8 +28,9 @@ export interface Project {
   image: string;
   tech: string[];
   category: string;
-  github: string;
+  github?: string;
   demo: string;
+  playStore?: string;
   featured?: boolean;
 }
 

@@ -21,8 +21,9 @@ export default function SectionHeading({ eyebrow, title, subtitle, center = true
       {eyebrow && (
         <motion.span
           variants={fadeInUp}
-          className="inline-flex items-center gap-2 rounded-full border border-royal-500/20 bg-royal-500/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-royal-600 dark:text-royal-300"
+          className="inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold-400 dark:text-gold-300 backdrop-blur-md shadow-glow-gold"
         >
+          <span className="text-gold-400">✦</span>
           {eyebrow}
         </motion.span>
       )}

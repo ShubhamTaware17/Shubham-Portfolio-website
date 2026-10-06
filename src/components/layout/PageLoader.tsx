@@ -15,7 +15,7 @@ export default function PageLoader() {
         className="relative h-16 w-16"
       >
         <div className="absolute inset-0 rounded-full border-2 border-royal-500/20 border-t-royal-500" />
-        <div className="absolute inset-2 rounded-full border-2 border-cyan-400/20 border-b-cyan-400" />
+        <div className="absolute inset-2 rounded-full border-2 border-royal-300/20 border-b-royal-300" />
         <Atom className="absolute inset-0 m-auto h-6 w-6 text-royal-500" />
       </motion.div>
       <motion.p

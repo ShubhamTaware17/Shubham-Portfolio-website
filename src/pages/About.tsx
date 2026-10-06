@@ -23,18 +23,24 @@ export default function About() {
         />
 
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-5">
+          {/* Photo placeholder */}
           <Reveal className="lg:col-span-2" y={-20}>
             <div className="group relative mx-auto max-w-sm">
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-royal-500/30 to-cyan-400/30 opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl glass-card">
-                <div className="flex h-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-royal-500/5 to-cyan-400/5">
-                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-royal-600 to-cyan-500 font-display text-5xl font-bold text-white shadow-glow">
+              <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-br from-royal-500/30 via-purple-500/20 to-indigo-500/30 opacity-70 blur-xl transition-opacity group-hover:opacity-100" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl glass-card border border-[rgb(var(--glass-border))] shadow-soft-lg">
+                <div className="flex h-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-royal-500/10 via-purple-500/5 to-transparent p-6 text-center">
+                  <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl bg-gradient-to-br from-royal-600 via-purple-600 to-indigo-600 font-display text-5xl font-extrabold text-white shadow-glow">
                     ST
+                    <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 border-2 border-[rgb(var(--bg))]">
+                      <span className="h-2 w-2 rounded-full bg-white" />
+                    </span>
                   </div>
-                  <p className="font-display text-lg font-semibold">Shubham Taware</p>
-                  <p className="text-sm text-[rgb(var(--text-soft))]">Software Engineer</p>
-                  <span className="chip">
-                    <MapPin className="h-3 w-3" /> {PERSON.location}
+                  <div>
+                    <p className="font-display text-xl font-bold text-[rgb(var(--text))]">Shubham Taware</p>
+                    <p className="mt-1 text-sm font-semibold text-royal-600 dark:text-royal-300">Frontend & Mobile Engineer</p>
+                  </div>
+                  <span className="badge-app mt-1">
+                    <MapPin className="h-3.5 w-3.5 text-royal-500" /> {PERSON.location}
                   </span>
                 </div>
               </div>
@@ -73,21 +79,21 @@ export default function About() {
                   <motion.div
                     key={card.label}
                     variants={itemVariants}
-                    className="group rounded-2xl glass-card p-5 text-center transition-transform hover:-translate-y-1"
+                    className="group rounded-2xl glass-card border border-[rgb(var(--glass-border))] p-5 text-center transition-all duration-300 hover:border-royal-500/50 hover:shadow-soft hover:-translate-y-1"
                   >
-                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 to-cyan-400/15 text-royal-500 transition-transform group-hover:scale-110">
+                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 to-purple-500/15 text-royal-600 dark:text-royal-300 transition-transform group-hover:scale-110">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <p className="font-display text-lg font-bold">{card.value}</p>
-                    <p className="mt-0.5 text-xs font-medium text-[rgb(var(--text-soft))]">{card.label}</p>
+                    <p className="font-display text-lg font-bold text-[rgb(var(--text))]">{card.value}</p>
+                    <p className="mt-0.5 text-xs font-semibold text-[rgb(var(--text-soft))]">{card.label}</p>
                   </motion.div>
                 );
               })}
             </motion.div>
 
-            <Reveal delay={0.2} className="mt-6">
+            <Reveal delay={0.2} className="mt-7">
               <a href={PERSON.resumeUrl} className="btn-primary">
-                <Download className="h-4 w-4" /> Download Resume
+                <Download className="h-4 w-4" /> Download Full Resume
               </a>
             </Reveal>
           </div>
@@ -112,29 +118,29 @@ export default function About() {
                 <motion.div
                   key={edu.id}
                   variants={itemVariants}
-                  className="group relative overflow-hidden rounded-2xl glass-card p-6 transition-transform hover:-translate-y-1 sm:p-8"
+                  className="group relative overflow-hidden rounded-2xl glass-card border border-[rgb(var(--glass-border))] p-6 sm:p-8 transition-all duration-300 hover:border-royal-500/50 hover:shadow-soft-lg hover:-translate-y-1"
                 >
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 to-cyan-400/15 text-royal-500">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 via-purple-500/15 to-indigo-500/15 text-royal-600 dark:text-royal-300 border border-royal-500/20">
                         <GraduationCap className="h-6 w-6" />
                       </div>
                       <div>
-                        <h3 className="font-display text-lg font-semibold sm:text-xl">{edu.degree}</h3>
-                        <p className="mt-1 text-sm font-medium text-royal-600 dark:text-royal-300">{edu.institution}</p>
+                        <h3 className="font-display text-lg font-bold sm:text-xl text-[rgb(var(--text))]">{edu.degree}</h3>
+                        <p className="mt-1 text-sm font-semibold text-royal-600 dark:text-royal-300">{edu.institution}</p>
                         <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--text-soft))]">{edu.description}</p>
                       </div>
                     </div>
                     <div className="flex flex-col items-start gap-2 sm:items-end">
-                      <span className="chip">{edu.period}</span>
+                      <span className="chip text-xs font-semibold">{edu.period}</span>
                       <span
-                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${
+                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
                           edu.status === 'pursuing'
-                            ? 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-300'
-                            : 'bg-green-500/10 text-green-600 dark:text-green-300'
+                            ? 'bg-royal-500/10 text-royal-600 dark:text-royal-300 border border-royal-500/20'
+                            : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-500/20'
                         }`}
                       >
-                        {edu.status === 'pursuing' ? 'Pursuing' : 'Completed'}
+                        {edu.status === 'pursuing' ? '⚡ Pursuing' : '✓ Completed'}
                       </span>
                     </div>
                   </div>

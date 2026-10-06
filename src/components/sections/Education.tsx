@@ -30,7 +30,7 @@ export default function Education() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 to-cyan-400/15 text-royal-500">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/10 to-royal-700/10 text-royal-500">
                       <GraduationCap className="h-6 w-6" />
                     </div>
                     <div>
@@ -44,7 +44,7 @@ export default function Education() {
                     <span
                       className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${
                         edu.status === 'pursuing'
-                          ? 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-300'
+                          ? 'bg-royal-500/10 text-royal-600 dark:text-royal-300'
                           : 'bg-green-500/10 text-green-600 dark:text-green-300'
                       }`}
                     >

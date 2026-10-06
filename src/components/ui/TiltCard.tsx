@@ -47,7 +47,7 @@ export default function TiltCard({ children, className = '', maxTilt = 10 }: Til
       className={`perspective relative ${className}`}
     >
       <div
-        className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-royal-500/0 via-royal-500/0 to-cyan-400/0 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-60"
+        className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-royal-500/0 via-royal-500/0 to-royal-400/0 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-60"
         style={{ opacity: hovering ? 0.4 : 0 }}
       />
       {children}

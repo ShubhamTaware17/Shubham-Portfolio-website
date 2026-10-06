@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const PHRASES = ['Frontend Developer', 'React Developer', 'MERN Stack Developer'];
+const PHRASES = ['React.js Developer', 'React Native Developer', 'Frontend Developer', 'Full Stack Developer'];
 
 export function useTypingEffect(phrases: string[] = PHRASES, typeSpeed = 90, deleteSpeed = 45, pause = 1400) {
   const [text, setText] = useState('');

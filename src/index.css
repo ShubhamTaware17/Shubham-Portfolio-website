@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --bg: 255 255 255;
-    --bg-soft: 248 250 252;
-    --text: 15 23 42;
-    --text-soft: 71 85 105;
-    --border: 226 232 240;
-    --glass: 255 255 255 / 0.7;
-    --glass-border: 255 255 255 / 0.6;
+    --bg: 250 248 244;
+    --bg-soft: 255 255 255;
+    --text: 28 24 20;
+    --text-soft: 120 105 90;
+    --border: 229 215 198;
+    --glass: 255 255 255 / 0.92;
+    --glass-border: 212 175 122 / 0.45;
   }
 
   .dark {
-    --bg: 8 10 27;
-    --bg-soft: 15 18 42;
-    --text: 226 232 240;
-    --text-soft: 148 163 184;
-    --border: 30 41 59;
-    --glass: 15 23 42 / 0.6;
-    --glass-border: 148 163 184 / 0.12;
+    --bg: 10 10 10;
+    --bg-soft: 18 18 18;
+    --text: 245 235 225;
+    --text-soft: 175 162 148;
+    --border: 229 201 166 / 0.16;
+    --glass: 18 18 18 / 0.85;
+    --glass-border: 229 201 166 / 0.22;
   }
 
   * {
@@ -40,55 +40,55 @@
   }
 
   ::selection {
-    @apply bg-royal-500/30 text-royal-900 dark:text-royal-100;
+    @apply bg-gold-400/30 text-gold-100;
   }
 
-  /* Custom scrollbar */
+  /* Luxury Gold scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    @apply bg-[#0A0A0A]/50;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-royal-500/40 rounded-full border-2 border-solid border-transparent bg-clip-padding;
+    @apply bg-gold-400/40 rounded-full border-2 border-solid border-transparent bg-clip-padding;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-royal-500/60;
+    @apply bg-gold-400/70;
   }
 }
 
 @layer components {
   .glass {
     background: rgb(var(--glass));
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
     border: 1px solid rgb(var(--glass-border));
   }
 
   .glass-card {
-    @apply glass rounded-2xl shadow-soft;
+    @apply glass rounded-2xl shadow-soft transition-all duration-300;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-royal-600 via-royal-500 to-cyan-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#F5E6D3] via-[#DFBE8D] to-[#B88E52] bg-clip-text text-transparent;
   }
 
-  .gradient-text-cyan {
-    @apply bg-gradient-to-r from-cyan-500 to-royal-500 bg-clip-text text-transparent;
+  .gradient-text-gold {
+    @apply bg-gradient-to-r from-[#FFF5EA] via-[#E5C9A6] to-[#C69F67] bg-clip-text text-transparent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-royal-600 to-royal-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:-translate-y-0.5 active:translate-y-0;
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#E5C9A6] via-[#DFBE8D] to-[#C69F67] px-6 py-3 text-sm font-bold text-[#0A0908] shadow-glow transition-all duration-300 hover:shadow-glow-gold hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-6 py-3 text-sm font-semibold text-[rgb(var(--text))] transition-all duration-300 hover:border-royal-400 hover:text-royal-600 dark:hover:text-royal-300 hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-6 py-3 text-sm font-semibold text-[rgb(var(--text))] shadow-sm transition-all duration-300 hover:border-gold-400 hover:text-gold-300 hover:-translate-y-0.5 hover:shadow-soft;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-royal-500/40 px-6 py-3 text-sm font-semibold text-royal-600 transition-all duration-300 hover:bg-royal-500/10 dark:text-royal-300 hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-gold-400/40 bg-gold-500/5 px-6 py-3 text-sm font-semibold text-gold-300 transition-all duration-300 hover:bg-gold-500/15 hover:border-gold-400 hover:-translate-y-0.5 hover:shadow-glow;
   }
 
   .section-container {
@@ -100,7 +100,15 @@
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-3 py-1 text-xs font-medium text-[rgb(var(--text-soft))];
+    @apply inline-flex items-center gap-1.5 rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-2.5 py-1 text-xs font-medium text-[rgb(var(--text-soft))] transition-all duration-200 hover:border-gold-400/50 hover:text-gold-300;
+  }
+
+  .badge-live {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 text-xs font-semibold text-emerald-400 backdrop-blur-md;
+  }
+
+  .badge-app {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-gold-500/10 border border-gold-400/30 px-3 py-1 text-xs font-semibold text-gold-300 backdrop-blur-md;
   }
 }
 

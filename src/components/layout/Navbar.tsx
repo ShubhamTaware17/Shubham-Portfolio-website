@@ -33,11 +33,11 @@ export default function Navbar() {
           }`}
         >
           <Link to="/" className="group flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-royal-600 to-cyan-500 font-display text-sm font-bold text-white shadow-glow">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#E5C9A6] via-[#DFBE8D] to-[#C69F67] font-display text-sm font-extrabold text-[#0A0908] shadow-glow-gold transition-transform duration-300 group-hover:scale-105">
               ST
             </span>
-            <span className="font-display text-base font-semibold tracking-tight">
-              Shubham<span className="text-royal-500">.</span>
+            <span className="font-display text-base font-bold tracking-tight">
+              Shubham<span className="text-gold-400">.</span>dev
             </span>
           </Link>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `relative rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-royal-600 dark:text-royal-300'
+                      ? 'text-gold-400 dark:text-gold-300 font-semibold'
                       : 'text-[rgb(var(--text-soft))] hover:text-[rgb(var(--text))]'
                   }`
                 }
@@ -60,7 +60,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-gradient-to-r from-royal-500 to-cyan-400"
+                        className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600"
                       />
                     )}
                   </>
@@ -73,7 +73,7 @@ export default function Navbar() {
             <ThemeToggle />
             <a
               href={PERSON.resumeUrl}
-              className="hidden rounded-xl bg-gradient-to-r from-royal-600 to-royal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition-all hover:shadow-glow-cyan hover:-translate-y-0.5 sm:inline-flex"
+              className="hidden rounded-xl bg-gradient-to-r from-[#E5C9A6] via-[#DFBE8D] to-[#C69F67] px-5 py-2.5 text-sm font-bold text-[#0A0908] shadow-glow-gold transition-all hover:shadow-glow-gold hover:-translate-y-0.5 sm:inline-flex"
             >
               Resume
             </a>

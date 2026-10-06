@@ -66,7 +66,7 @@ export default function Contact() {
                       value={form[field.name]}
                       onChange={handleChange}
                       placeholder={field.placeholder}
-                      className="w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] py-3 pl-10 pr-4 text-sm outline-none transition-colors focus:border-royal-500 focus:ring-2 focus:ring-royal-500/20"
+                      className="w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] py-3 pl-10 pr-4 text-sm outline-none transition-colors focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20"
                     />
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell me about your project..."
-                  className="w-full resize-none rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-4 py-3 text-sm outline-none transition-colors focus:border-royal-500 focus:ring-2 focus:ring-royal-500/20"
+                  className="w-full resize-none rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg-soft))] px-4 py-3 text-sm outline-none transition-colors focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20"
                 />
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-royal-600 to-royal-500 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:shadow-glow-cyan disabled:opacity-70"
+              className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#E5C9A6] via-[#DFBE8D] to-[#C69F67] py-3.5 text-sm font-bold text-[#0A0908] shadow-glow-gold transition-all hover:shadow-glow-gold hover:brightness-105 disabled:opacity-70"
             >
               {status === 'loading' && <Loader2 className="h-4 w-4 animate-spin" />}
               {status === 'success' && <CheckCircle2 className="h-4 w-4" />}

@@ -23,19 +23,24 @@ export default function About() {
         />
 
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-5">
-          {/* Photo placeholder */}
+          {/* Photo placeholder / Avatar badge */}
           <Reveal className="lg:col-span-2" y={-20}>
             <div className="group relative mx-auto max-w-sm">
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-royal-500/30 to-cyan-400/30 opacity-60 blur-xl transition-opacity group-hover:opacity-90" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl glass-card">
-                <div className="flex h-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-royal-500/5 to-cyan-400/5">
-                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-royal-600 to-cyan-500 font-display text-5xl font-bold text-white shadow-glow">
+              <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-br from-gold-400/30 via-gold-500/20 to-gold-600/30 opacity-70 blur-xl transition-opacity group-hover:opacity-100" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl glass-card border border-gold-400/25 shadow-soft-lg">
+                <div className="flex h-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-gold-500/10 via-gold-500/5 to-transparent p-6 text-center">
+                  <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E5C9A6] via-[#DFBE8D] to-[#C69F67] font-display text-5xl font-extrabold text-[#0A0908] shadow-glow-gold">
                     ST
+                    <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 border-2 border-[rgb(var(--bg))]">
+                      <span className="h-2 w-2 rounded-full bg-white" />
+                    </span>
                   </div>
-                  <p className="font-display text-lg font-semibold">Shubham Taware</p>
-                  <p className="text-sm text-[rgb(var(--text-soft))]">Software Engineer</p>
-                  <span className="chip">
-                    <MapPin className="h-3 w-3" /> {PERSON.location}
+                  <div>
+                    <p className="font-display text-xl font-bold text-[rgb(var(--text))]">Shubham Taware</p>
+                    <p className="mt-1 text-sm font-semibold text-gold-400 dark:text-gold-300">Frontend & Mobile Engineer</p>
+                  </div>
+                  <span className="badge-app mt-1">
+                    <MapPin className="h-3.5 w-3.5 text-gold-400" /> {PERSON.location}
                   </span>
                 </div>
               </div>
@@ -75,13 +80,13 @@ export default function About() {
                   <motion.div
                     key={card.label}
                     variants={itemVariants}
-                    className="group rounded-2xl glass-card p-5 text-center transition-transform hover:-translate-y-1"
+                    className="group rounded-2xl glass-card border border-gold-400/20 p-5 text-center transition-all duration-300 hover:border-gold-400/50 hover:shadow-soft hover:-translate-y-1"
                   >
-                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-royal-500/15 to-cyan-400/15 text-royal-500 transition-transform group-hover:scale-110">
+                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-gold-400/15 to-gold-600/15 text-gold-400 transition-transform group-hover:scale-110">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <p className="font-display text-lg font-bold">{card.value}</p>
-                    <p className="mt-0.5 text-xs font-medium text-[rgb(var(--text-soft))]">{card.label}</p>
+                    <p className="font-display text-lg font-bold text-[rgb(var(--text))]">{card.value}</p>
+                    <p className="mt-0.5 text-xs font-semibold text-[rgb(var(--text-soft))]">{card.label}</p>
                   </motion.div>
                 );
               })}
